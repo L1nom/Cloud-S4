@@ -83,7 +83,7 @@ def run_pipeline(argv=None):
         (
             input_pcoll
             | 'Generate Images' >> beam.Map(generate_images)
-            | 'Generate Video' >> beam.Map(generate_video, 'gs://highd_project/images', 'gs://highd_project/my-video.mp4', 60)
+            | 'Generate Video' >> beam.Map(generate_video, 'images', 'my-video.mp4', 60)
         )
 
 
